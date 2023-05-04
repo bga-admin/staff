@@ -1,0 +1,53 @@
+/* bundled styles */
+/* form #12245 */
+#newsletter-signup .mc4wp-form-12245 label, 
+#newsletter-signup .mc4wp-form-12245 input, 
+#newsletter-signup .mc4wp-form-12245 textarea, 
+#newsletter-signup .mc4wp-form-12245 select, 
+#newsletter-signup .mc4wp-form-12245 button {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#newsletter-signup .mc4wp-form-12245 {
+	display: block;
+	text-align: left;
+	width: 100%; max-width: 100% !important;
+	background-repeat: repeat;
+}
+
+#newsletter-signup .mc4wp-form-12245 label {
+	vertical-align: top;
+	margin-bottom: 6px;
+	display: block;
+}
+
+#newsletter-signup .mc4wp-form-12245 input[type='text'],
+#newsletter-signup .mc4wp-form-12245 input[type='email'],
+#newsletter-signup .mc4wp-form-12245 input[type='url'],
+#newsletter-signup .mc4wp-form-12245 input[type='tel'],
+#newsletter-signup .mc4wp-form-12245 input[type='number'],
+#newsletter-signup .mc4wp-form-12245 input[type='date'],
+#newsletter-signup .mc4wp-form-12245 select,
+#newsletter-signup .mc4wp-form-12245 textarea {
+	vertical-align: top;
+	margin-bottom: 6px;
+	padding: 6px 12px;
+	width: 100%; max-width: 100%;
+	display: block;
+}
+
+#newsletter-signup .mc4wp-form-12245 input[type='radio'],
+#newsletter-signup .mc4wp-form-12245 input[type='checkbox'] {
+	margin-right: 6px;
+	display: inline-block
+}
+
+.mc4wp-form input[type='radio'], .mc4wp-form input[type='checkbox']{display:inline-grid;}
+.mc4wp-form h3 {font-size:1.6rem; color: #003282; margin: 2rem 0 0.8rem 0;}
+.mc4wp-form .form-list-heading span {font-size:1.3rem; text-transform: none;}
+.mc4wp-form p {margin: 0.2rem 0 1.2rem 0; text-transform: none; font-weight: 300; font-size: 1rem; line-height: 1.4rem;}
+.mc4wp-form label {font-size: 16px; font-weight: bold;}
+form.amp-form-submit-error [submit-error], form.amp-form-submit-success [submit-success], form.amp-form-submitting [submitting] {padding: 32px; background-color: #EBEBEB; margin-top: 32px; font-size: 1.2rem; color: #111;}
+
