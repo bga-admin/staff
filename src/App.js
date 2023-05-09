@@ -1,7 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
 
 function App() {
+
+  let data
+
+  const [staff, setStaff] = React.useState();
+  let policy =[]
+
+
+  React.useEffect(function () {
+      fetch(
+        "https://script.googleusercontent.com/macros/echo?user_content_key=rFGe_Z-tIKk8Qn2h3IpOEFQpYFp34TSfDbTouYTFMWx489sicSQmx-u1U34GoN_yy5DADVUWy47OOAL5I0_0YWKKmNGIGejMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnDTZATvuSPtMi_EhefoUoYLI_aDIcZq27sUH4NX7DDueCCuH9Ogr7JuUHnlingAn02UL9w7rXqebBoIksNyC6tnRO92L71kPL9z9Jw9Md8uu&lib=M81s-3hnirGji1y4zjeMOyVo8lr0ql1Kg"
+      )
+        .then((res) => res.json())
+        .then((data) => setStaff(data));
+    }, []);
+  
+    if(staff){
+      console.log("staff is true")
+
+      staff.data.forEach((element,index) => {
+
+        staff.data[index].department == "policy" ? policy.push(staff.data[index]) : console.log("null")
+        staff.data[index].department == "engagement" ? policy.push(staff.data[index]) : console.log("null")
+        staff.data[index].department == "leadership" ? policy.push(staff.data[index]) : console.log("null")
+        staff.data[index].department == "intern" ? policy.push(staff.data[index]) : console.log("null")
+        staff.data[index].department == "newsroom" ? policy.push(staff.data[index]) : console.log("null")
+
+
+
+
+      });
+  
+    }
+    console.log(policy.map(staff=>staff.employee))
+
+    
+
   return (
     <div className="App">
 <div
@@ -11,9 +49,14 @@ function App() {
 >
   <section className="wp-block-group staff-team is-layout-constrained">
     <div className="wp-block-group__inner-container">
+      <h3>Policy</h3>
+      <div>
+      {policy.map(staff=>staff.employee)}
+      </div>
       <h3 className="wp-block-heading has-x-large-font-size" id="h-leadership">
         Leadership
       </h3>
+      <h3></h3>
       <div className="wp-block-columns is-layout-flex wp-container-30">
         <div className="wp-block-column is-layout-flow">
           <div className="wp-block-group is-layout-constrained">
